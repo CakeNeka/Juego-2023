@@ -1,2 +1,3 @@
-# Juego-2023
-Proyecto de desarrollo de videojuegos.
+# In Aestus (nombre provisional)
+
+- [devlog](./devlog/devlog.md)
