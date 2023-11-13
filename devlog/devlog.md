@@ -38,4 +38,12 @@ public class Movement : MonoBehaviour
 }
 ```
 
+### 13 de noviembre de 2023
+
+> - Sistema de salud y barra de vida
+> ![]()
+
 ![](./media/2023-11-12_1.png)
+
+
+### 17 de noviembre de 2023

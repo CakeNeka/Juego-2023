@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Busca el enemigo más cercano
+/// Busca el enemigo mï¿½s cercano
 /// </summary>
 public class TrackingCannon : MonoBehaviour
 {
 
-
     private void Update() {
-        Movement.SmoothRotation(transform, FindNearestEnemy().position - transform.position, 10f);
+        Transform target = FindNearestEnemy();
+
+        if (target != null) {
+            SmoothRotation(transform, target.position - transform.position, 10f);
+        }
     }
 
     private Transform FindNearestEnemy() {
@@ -34,4 +37,9 @@ public class TrackingCannon : MonoBehaviour
         return nearestEnemy;
     }
 
+    private void SmoothRotation(Transform t, Vector2 lookDirection, float rotationSpeed) {
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90; // -90 usando primitives, eliminar con sprites mirando a la derecha
+        Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        t.rotation = Quaternion.Slerp(t.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
 }
