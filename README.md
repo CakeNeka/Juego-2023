@@ -18,21 +18,26 @@
 #### Mecánicas
 
 - **Movimiento**
-    - flechas
+    - El jugador (un tanque) se maneja con las flechas
 - **Vida**
-    - Objetos aleatorios recuperan vida.
-- **Armas**
-    1. Cañón: Disparo automático al enemigo más cercano, con proyectiles (prefabs).
-    2. Cañón: Disparo en la dirección del movimiento
-    3. Órbita en círculos entorno al personaje.
+    - Sistema de *salud* clásico (puntos de vida) para jugador y enemigos
+    - Objetos de aparición aleatoria recuperan la vida del jugador
+    - Cada personaje tiene una barra de vida (¿con números?)
+- **Armas**: El disparo es siempre automático, el jugador solo controla movimiento
+    1. Cañón rotatorio: Disparo automático al enemigo más cercano, con proyectiles (prefabs).
+        - Balas atraviesan a los enemigos
+        - Más velocidad, menos daño.
+    2. Cañón frontal: Disparo en la dirección del movimiento
+        - Balas explotan al impactar (daño de área)
+        - Menos velocidad, mas daño.
+    3. Escudo: Orbita en círculos entorno al personaje.
 - **Enemigos**
-    - Todos: Al contactar, aplicar fuerza sobre jugador
-    - **a distancia**
-    - **melé**
+    - Movimiento: Hacia el jugador
+    - Todos: Daño de contacto
+    - Aparición: fuera de la visión del jugador
+    - Desaparición: OutOfBounds (¿Hacer área más grande?, ¿eliminarlos de otra forma?)
+    - Los enemigos dropean **puntos** y **objetos**
 
-Control de masas
-
-- Movimiento básico
 
 ### Aspectos técnicos
 
@@ -40,8 +45,8 @@ Diseño modular, es decir, 1 componente para cada función por ejemplo el **Obje
 - `Movement`
 - `PlayerStats`
 - **Armas**
-    - `TrackingCannon`
-
+    - `TrackingCannon` (Daño por impacto, )
+    - `FrontCannon` (¿Daño de área?)
 - Patrón `ObjectPooler` para la instanciación de proyectiles
 
 (escenas, controles, componentes)

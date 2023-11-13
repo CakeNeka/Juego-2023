@@ -14,7 +14,7 @@ public class BulletImpact : MonoBehaviour
             HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
 
             if (healthSystem != null) {
-                healthSystem.ReceiveDamage(damage);
+                healthSystem.ChangeHp(-damage);
             }
         }
     }

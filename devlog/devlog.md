@@ -41,9 +41,26 @@ public class Movement : MonoBehaviour
 ### 13 de noviembre de 2023
 
 > - Sistema de salud y barra de vida
-> ![]()
+> - Coneceptos: colisiones y disparadores (`Triggers`)
+> - Movimiento de enemigos
+> 
+> ![](./media/2023-11-13_1.png)
 
 ![](./media/2023-11-12_1.png)
 
 
 ### 17 de noviembre de 2023
+
+- **`Update`**:
+    - Called every frame
+    - Input handling here
+    - `Time.deltaTime`: The time it takes to execute one frame (variable)
+- **`FixedUpdate`** 
+    - Called every fixed interval (0.02s) ("physics framerate")
+    - Physics calculations here
+    - `Time.fixedDeltaTime`: Physics interval (0.02s by default)
+
+- [ ] Menu
+- [ ] Enemy spawn
+- [ ] Front cannon
+- [ ] 

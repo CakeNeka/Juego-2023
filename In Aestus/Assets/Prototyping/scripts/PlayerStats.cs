@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour {
-    [Header("Movimiento")]
-    [SerializeField]
-    private float rotationSpeed;
-    public float RotationSpeed {
-        get {
-            return rotationSpeed;
-        }
-    }
 
-    [SerializeField]
-    private float movementSpeed;
+    private HealthSystem playerHealthSystem;
+
+    [Header("Movement")]
+    [SerializeField] private float rotationSpeed;
+    public float RotationSpeed => rotationSpeed;
+
+    [SerializeField] private float movementSpeed;
     public float MovementSpeed {
         get {
             return movementSpeed; // * modifiers
@@ -21,8 +18,14 @@ public class PlayerStats : MonoBehaviour {
     }
 
     [Header("Health System")]
-    [SerializeField] 
-    private float health;
-
+    [SerializeField] private float health;
     
+
+    [Header("Shooting")]
+    [SerializeField] private float rotatingCannonPeriod;
+
+    private void Start() {
+        playerHealthSystem = GetComponent<HealthSystem>();
+    }
+
 }
