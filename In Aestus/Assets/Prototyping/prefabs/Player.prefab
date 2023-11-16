@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 4437219058467386813}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +237,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 7
   movementSpeed: 3
-  health: 10
+  maxHealth: 20
+  invulnerabilityDuration: 10
+  rotatingCannonPeriod: 0
 --- !u!1 &7104447691085982074
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +443,7 @@ GameObject:
   - component: {fileID: 4617999001861361533}
   - component: {fileID: 2320031048308965913}
   - component: {fileID: 3845130536425501160}
+  - component: {fileID: 5755136369044838851}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Player
@@ -562,6 +565,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5755136369044838851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062444192256968909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8947a0e9bb4d6f409803bc39a8da56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 0
+  currentHp: 0
+  invulnerabilityDuration: 0
 --- !u!1 &9173000473202585015
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,4 +696,4 @@ MonoBehaviour:
   pooler: {fileID: 3529486829475169031}
   firepoint: {fileID: 5452350974357671806}
   bulletPrefab: {fileID: 8895014087501283237, guid: acbf04757fa205547b9596e790250d69, type: 3}
-  shootDelay: 0.2
+  shootDelay: 0.3

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletImpact : MonoBehaviour
+public class BulletCollisions : MonoBehaviour
 {
     [SerializeField] private int damage;
     [SerializeField]
@@ -12,9 +12,8 @@ public class BulletImpact : MonoBehaviour
     {
         if (hostileTags.Contains(collision.tag)) {
             HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
-
-            if (healthSystem != null) {
-                healthSystem.ChangeHp(-damage);
+            if (healthSystem != null && healthSystem.IsVulnerable) { // Causa daño si el objeto es vulnerable
+                healthSystem.TakeDamage(damage, false);
             }
         }
     }

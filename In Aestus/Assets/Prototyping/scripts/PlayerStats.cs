@@ -18,14 +18,18 @@ public class PlayerStats : MonoBehaviour {
     }
 
     [Header("Health System")]
-    [SerializeField] private float health;
-    
+    [SerializeField] private int maxHealth;
+    [SerializeField] private float invulnerabilityDuration;
 
     [Header("Shooting")]
     [SerializeField] private float rotatingCannonPeriod;
 
     private void Start() {
-        playerHealthSystem = GetComponent<HealthSystem>();
+        playerHealthSystem = GetComponentInChildren<HealthSystem>();
+       
+        playerHealthSystem.MaxHp = maxHealth;
+        playerHealthSystem.RestoreHealth();
+        playerHealthSystem.InvulnerabilityDuration = invulnerabilityDuration;
     }
 
 }

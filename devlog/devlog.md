@@ -60,7 +60,14 @@ public class Movement : MonoBehaviour
     - Physics calculations here
     - `Time.fixedDeltaTime`: Physics interval (0.02s by default)
 
-- [ ] Menu
+**Health System**
+- [ ] Healthbar de jugador
+- [x] Invulnerabilidad temporal de jugador al recibir daño
+- [x] Condición de pérdida, Game Over
+
+https://www.youtube.com/watch?v=QN8dm0RD3mY&list=PLgXA5L5ma2Bveih0btJV58REE2mzfQLOQ&index=2
+
+**Otros**
+- [ ] Menu (otra escena)
 - [ ] Enemy spawn
 - [ ] Front cannon
-- [ ] 

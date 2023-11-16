@@ -6,4 +6,5 @@ public class PlayerHealthSystem : HealthSystem {
     protected override void Die() {
         GameManager.Instance.GameOver();
     }
+
 }
