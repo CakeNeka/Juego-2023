@@ -16,11 +16,12 @@ public class AutoShooting : MonoBehaviour
     private Coroutine shootingCoroutine;
 
     private void Start() {
+        Debug.Log(pooler);
         shootingCoroutine = StartCoroutine(ShootRepeating());
     }
 
-    // TODO use Object pooler pattern
     IEnumerator ShootRepeating() {
+        yield return new WaitForSeconds(shootDelay);
         while (true) {
             GameObject bullet = pooler.GetObject();
             bullet.SetActive(false);

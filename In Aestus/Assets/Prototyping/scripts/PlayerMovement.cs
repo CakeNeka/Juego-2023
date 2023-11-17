@@ -9,24 +9,29 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     Rigidbody2D rb2d;
+
     private Vector2 movementDir;
     private PlayerStats playerStats;
-    Transform spriteTransform;
+    Transform spriteTransform;      
 
     void Start() {
         rb2d = GetComponent<Rigidbody2D>();
+
         playerStats = GetComponent<PlayerStats>();
         spriteTransform = transform.GetChild(0);
     }
 
     void Update() {
+
         movementDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+
         if (movementDir.magnitude != 0) {
             RotatePlayerSprite();
         }
     }
 
     private void FixedUpdate() {
+
         Vector2 movement = movementDir * playerStats.MovementSpeed;
         rb2d.velocity = movement;
     }

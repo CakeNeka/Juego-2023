@@ -10,28 +10,34 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour { 
     public static GameManager Instance {  get; private set; } // The only instance of GameManager.
 
-
+    [SerializeField] GameObject playerPrefab;
     private Transform playerTransform;
-    public Transform PlayerTransform => playerTransform;
     private UIManager uiManager;
+
+    public Transform PlayerTransform => playerTransform;
 
     private void Awake() {
         if (Instance != null) {
             Destroy(gameObject);
             Debug.LogError("2 or more GameManagers found in scene");
+            return;
         }
+
         Time.timeScale = 1.0f;
         Instance = this;
+
     }
 
     private void Start() {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform; 
+        playerTransform = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity).transform;
+        playerTransform.gameObject.name = "Player";
+
         uiManager = FindObjectOfType<UIManager>();
     }
 
     public void GameOver() {
         uiManager.showGameOverMenu();
-        Time.timeScale = 0f; // 
+        Time.timeScale = 0f;
     }
 
     public void RestartGame() {

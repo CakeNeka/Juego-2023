@@ -71,3 +71,6 @@ https://www.youtube.com/watch?v=QN8dm0RD3mY&list=PLgXA5L5ma2Bveih0btJV58REE2mzfQ
 - [ ] Menu (otra escena)
 - [ ] Enemy spawn
 - [ ] Front cannon
+- [ ] Seguimiento de camara
+
+### 
