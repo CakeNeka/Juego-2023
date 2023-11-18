@@ -10,8 +10,8 @@ public class AutoShooting : MonoBehaviour
     private Transform firepoint;
     [SerializeField]
     private GameObject bulletPrefab;
-    [SerializeField]
-    private float shootDelay; // TODO use PlayerStats class
+
+    public float ShootDelay { get; set; } 
 
     private Coroutine shootingCoroutine;
 
@@ -21,14 +21,14 @@ public class AutoShooting : MonoBehaviour
     }
 
     IEnumerator ShootRepeating() {
-        yield return new WaitForSeconds(shootDelay);
+        yield return new WaitForSeconds(ShootDelay);
         while (true) {
             GameObject bullet = pooler.GetObject();
             bullet.SetActive(false);
             bullet.transform.position = firepoint.transform.position;
             bullet.transform.rotation = firepoint.transform.rotation;
             bullet.SetActive(true);
-            yield return new WaitForSeconds(shootDelay);
+            yield return new WaitForSeconds(ShootDelay);
         }
     }
 }

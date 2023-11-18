@@ -2,7 +2,7 @@
 
 ### Diseño
 
-- Top down survivor de naves
+- Top down survivor de Tanques.
 
 **Es como:** 
 - Vampire Survivors 
@@ -55,5 +55,10 @@ Diseño modular, es decir, 1 componente para cada función por ejemplo el **Obje
 
 - [devlog](./devlog/devlog.md)
 
-### Dibujo
+### Historia
+
+### Recursos utilizados
+
+- Tutorial para desarrollar un clon de **Vampire Survivors**
+    !(Vampire Survivors Clone Tutorial)[https://www.youtube.com/watch?v=QN8dm0RD3mY&list=PLgXA5L5ma2Bveih0btJV58REE2mzfQLOQ&index=2]
 

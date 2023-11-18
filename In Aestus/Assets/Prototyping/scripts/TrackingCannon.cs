@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class TrackingCannon : MonoBehaviour
 {
+    public float RotationSpeed { get; set; }
 
     private void Update() {
         Transform target = FindNearestEnemy();

@@ -1,35 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour {
-
-    private HealthSystem playerHealthSystem;
-
+[Serializable]
+[SerializeField]
+[CreateAssetMenu(fileName = "TestScriptbleObject", menuName = "ScriptableObjects/TestScriptableObject")]
+public class PlayerStats : ScriptableObject
+{
     [Header("Movement")]
-    [SerializeField] private float rotationSpeed;
-    public float RotationSpeed => rotationSpeed;
-
-    [SerializeField] private float movementSpeed;
-    public float MovementSpeed {
-        get {
-            return movementSpeed; // * modifiers
-        } 
-    }
+    public float rotationSpeed;
+    public float movementSpeed;
 
     [Header("Health System")]
-    [SerializeField] private int maxHealth;
-    [SerializeField] private float invulnerabilityDuration;
+    public int maxHealth;
+    public float invulnerabilityDuration;
 
     [Header("Shooting")]
-    [SerializeField] private float rotatingCannonPeriod;
-
-    private void Start() {
-        playerHealthSystem = GetComponentInChildren<HealthSystem>();
-       
-        playerHealthSystem.MaxHp = maxHealth;
-        playerHealthSystem.RestoreHealth();
-        playerHealthSystem.InvulnerabilityDuration = invulnerabilityDuration;
-    }
+    public float trackingCannonRotationSpeed;
+    public float trackingCannonDelay;
 
 }

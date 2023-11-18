@@ -165,6 +165,7 @@ MonoBehaviour:
   maxHp: 20
   currentHp: 0
   invulnerabilityDuration: 0
+  healthBar: {fileID: 0}
 --- !u!114 &5131655904438625407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,5 +178,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4da0eb8727bc6d4d92ddfb91e8b8f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  initialMovementSpeed: 2
   damage: 1

@@ -28,7 +28,6 @@ public class EnemyController : MonoBehaviour
         if (!touchingPlayer) {
             rb.velocity = movement;
         } else {
-            Debug.Log("Enemy touching player");
         }
     }
 

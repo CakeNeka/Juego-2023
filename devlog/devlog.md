@@ -61,16 +61,18 @@ public class Movement : MonoBehaviour
     - `Time.fixedDeltaTime`: Physics interval (0.02s by default)
 
 **Health System**
-- [ ] Healthbar de jugador
+- [x] Healthbar de jugador
 - [x] Invulnerabilidad temporal de jugador al recibir daño
 - [x] Condición de pérdida, Game Over
 
-https://www.youtube.com/watch?v=QN8dm0RD3mY&list=PLgXA5L5ma2Bveih0btJV58REE2mzfQLOQ&index=2
 
 **Otros**
-- [ ] Menu (otra escena)
-- [ ] Enemy spawn
+- [x] Organizar `PlayerStats`
+- [ ] Mejorar Daño de enemigos a jugador
 - [ ] Front cannon
 - [ ] Seguimiento de camara
 
-### 
+### 20 de noviembre de 2023
+
+- [ ] Menu (otra escena)
+- [ ] Enemy spawn
