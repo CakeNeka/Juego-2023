@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afd6e406532fd74da4ecd5dcef5daf0, type: 3}
   m_Name: InitialPlayerStats
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
-  movementSpeed: 0
-  maxHealth: 0
-  invulnerabilityDuration: 0
-  rotatingCannonPeriod: 0
+  rotationSpeed: 10
+  movementSpeed: 3
+  maxHealth: 20
+  invulnerabilityDuration: 0.4
+  trackingCannonRotationSpeed: 5
+  trackingCannonDelay: 1

@@ -68,11 +68,11 @@ public class Movement : MonoBehaviour
 
 **Otros**
 - [x] Organizar `PlayerStats`
-- [ ] Mejorar Daño de enemigos a jugador
+- [x] Mejorar Daño de enemigos a jugador
 - [ ] Front cannon
-- [ ] Seguimiento de camara
 
 ### 20 de noviembre de 2023
 
 - [ ] Menu (otra escena)
 - [ ] Enemy spawn
+- [ ] Seguimiento de camara

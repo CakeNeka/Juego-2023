@@ -158,6 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2351545074408592487}
   - component: {fileID: 2134698295406026982}
+  - component: {fileID: 3469707320281006426}
   - component: {fileID: 1310755522050245054}
   - component: {fileID: 4437219058467386813}
   m_Layer: 0
@@ -176,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 6863624737803188072}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.39, y: 0.58, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -212,6 +213,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &3469707320281006426
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863624737803188072}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.77
 --- !u!114 &1310755522050245054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,11 +276,6 @@ MonoBehaviour:
   frontLeftCannonShooting: {fileID: 0}
   frontRightCannonShooting: {fileID: 0}
   playerStats: {fileID: 11400000, guid: 0a1c5bb20829a9547ba25e1ca2dfdbfe, type: 2}
-  rotationSpeed: 7
-  movementSpeed: 3
-  maxHealth: 3
-  invulnerabilityDuration: 10
-  rotatingCannonPeriod: 0
 --- !u!1 &7104447691085982074
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +687,6 @@ MonoBehaviour:
   pooler: {fileID: 1236871625757518247}
   firepoint: {fileID: 5452350974357671806}
   bulletPrefab: {fileID: 8895014087501283237, guid: acbf04757fa205547b9596e790250d69, type: 3}
-  shootDelay: 0.3
 --- !u!114 &1236871625757518247
 MonoBehaviour:
   m_ObjectHideFlags: 0

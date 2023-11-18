@@ -53,7 +53,7 @@ Diseño modular, es decir, 1 componente para cada función por ejemplo el **Obje
 
 ### Desarrollo
 
-- [devlog](./devlog/devlog.md)
+- [Devlog](./devlog/devlog.md)
 
 ### Historia
 
