@@ -44,7 +44,6 @@ public abstract class HealthSystem : MonoBehaviour {
 
     public void TakeDamage(int damage, bool enablesInvulnerability) {
         if (tag.Equals("Player"))   // Remove, used just for debugging
-            Debug.Log(name + " took damage");
 
         if (!IsVulnerable) {
             Debug.LogError("Trying to damage an invincible object!");

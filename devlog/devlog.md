@@ -69,10 +69,16 @@ public class Movement : MonoBehaviour
 **Otros**
 - [x] Organizar `PlayerStats`
 - [x] Mejorar Daño de enemigos a jugador
-- [ ] Front cannon
 
 ### 20 de noviembre de 2023
 
+> Bug <br>
+> [Solution](https://forum.unity.com/threads/ontriggerstay-not-being-called.794235/)<br>
+> ![](./media/2023-11-20_1.png)
+
 - [ ] Menu (otra escena)
+- [ ] Front cannon
 - [ ] Enemy spawn
 - [ ] Seguimiento de camara
+
+Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprites**.

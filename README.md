@@ -55,7 +55,9 @@ Diseño modular, es decir, 1 componente para cada función por ejemplo el **Obje
 
 - [Devlog](./devlog/devlog.md)
 
-### Historia
+### Capturas
+
+- 
 
 ### Recursos utilizados
 

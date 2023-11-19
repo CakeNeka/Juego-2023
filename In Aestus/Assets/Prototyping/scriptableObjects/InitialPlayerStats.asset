@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 10
   movementSpeed: 3
-  maxHealth: 20
-  invulnerabilityDuration: 0.4
+  maxHealth: 50
+  invulnerabilityDuration: 1
   trackingCannonRotationSpeed: 5
-  trackingCannonDelay: 1
+  trackingCannonDelay: 0.5
