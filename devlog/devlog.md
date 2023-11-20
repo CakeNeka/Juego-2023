@@ -77,6 +77,12 @@ public class Movement : MonoBehaviour
 > ![](./media/2023-11-20_1.png)
 
 - [ ] Menu (otra escena)
+    - Salir
+    - Jugar
+    - Seleccionar tanque
+        - tanque
+        - \<- anterior
+        - -\> Siguiente
 - [ ] Front cannon
 - [ ] Enemy spawn
 - [ ] Seguimiento de camara
