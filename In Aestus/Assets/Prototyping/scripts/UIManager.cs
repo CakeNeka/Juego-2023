@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     public void ExitToMenu() {
         Debug.Log("Quitting game");
+        // TODO load scene 'menu' (1)
     }
 
     public void Restart() {
