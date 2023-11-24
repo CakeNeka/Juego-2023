@@ -76,15 +76,29 @@ public class Movement : MonoBehaviour
 > [Solution](https://forum.unity.com/threads/ontriggerstay-not-being-called.794235/)<br>
 > ![](./media/2023-11-20_1.png)
 
-- [ ] Menu (otra escena)
+- [x] Menu (otra escena)
     - Salir
     - Jugar
-    - Seleccionar tanque
-        - tanque
-        - \<- anterior
-        - -\> Siguiente
-- [ ] Front cannon
-- [ ] Enemy spawn
-- [ ] Seguimiento de camara
+- [x] Enemy spawn
 
 Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprites**.
+
+### 24 de noviembre
+
+- [x] Sprite de jugador
+- [ ] Front cannon
+- [ ] Seguimiento de camara
+- [ ] Menú Seleccionar tanque
+    - tanque
+    - \<- anterior
+    - -\> Siguiente
+
+### Semana 27 de noviembre - 3 de noviembre
+
+- **SPRITES** o gráficos, adiós triángulos
+- **MAPA** Generado aleatoriamente si es posible
+- **UI**
+    - Pausa
+    - Ganar/Perder 
+    - Temporizador
+- boss
