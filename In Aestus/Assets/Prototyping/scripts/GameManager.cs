@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Start() {
-        playerTransform = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity).transform;
+        playerTransform = GameObject.Find("Player").transform; // Instantiate(playerPrefab, Vector3.zero, Quaternion.identity).transform;
         playerTransform.gameObject.name = "Player";
 
         uiManager = FindObjectOfType<UIManager>();
