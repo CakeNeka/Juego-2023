@@ -1,9 +1,6 @@
 # TONK
 
-- **T**onk
-- **O**nly
-- **N**eeds
-- **K**illing
+> ### **T**urbo **O**mega **N**itro **K**night
 
 ```
  _________  ________  ________   ___  __            
