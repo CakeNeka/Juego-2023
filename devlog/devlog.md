@@ -101,4 +101,8 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
     - Pausa
     - Ganar/Perder 
     - Temporizador
-- boss
+
+### Semana 4 de diciembre - 10 de diciembre
+
+- [ ] Spawn enemies out of bounds
+- [ ]  boss

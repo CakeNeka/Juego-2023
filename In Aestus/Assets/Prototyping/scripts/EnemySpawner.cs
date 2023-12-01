@@ -32,16 +32,6 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    // Debug
-    float t = 0;
-    private void Update() {
-        t += Time.deltaTime;
-        if (t >= 2) {
-            Debug.Log(FindObjectsOfType<EnemyController>().Length + " " + ActiveEnemies);
-        }
-    }
-    //
-
     private GameObject RandomEnemy() {
         return enemies[Random.Range(0, enemies.Count)];
     }
