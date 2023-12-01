@@ -9,7 +9,6 @@ public class AutoShooting : MonoBehaviour
     [SerializeField]
     private Transform firepoint;
     [SerializeField]
-    private GameObject bulletPrefab;
 
     public float ShootDelay { get; set; } 
 
