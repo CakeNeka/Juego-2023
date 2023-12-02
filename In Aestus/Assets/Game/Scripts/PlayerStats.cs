@@ -20,5 +20,7 @@ public class PlayerStats : ScriptableObject
     [Header("Shooting")]
     public float trackingCannonRotationSpeed;
     public float trackingCannonDelay;
+    public float frontCannonDelay;
+
 
 }

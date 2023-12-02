@@ -26,7 +26,7 @@ public class AutoShooting : MonoBehaviour
             bullet.SetActive(false);
             bullet.transform.position = firepoint.transform.position;
             bullet.transform.rotation = firepoint.transform.rotation;
-            bullet.SetActive(true);
+            bullet.SetActive(true);  
             yield return new WaitForSeconds(ShootDelay);
         }
     }

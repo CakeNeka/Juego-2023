@@ -35,6 +35,8 @@ public class PlayerStatsHandler : MonoBehaviour {
 
         trackingCannon.RotationSpeed = playerStats.trackingCannonRotationSpeed;
         trackingCannonShooting.ShootDelay = playerStats.trackingCannonDelay;
+        frontLeftCannonShooting.ShootDelay = playerStats.frontCannonDelay;
+        frontRightCannonShooting.ShootDelay = playerStats.frontCannonDelay;
 
         playerMovement.RotationSpeed = playerStats.rotationSpeed;
         playerMovement.MovementSpeed = playerStats.movementSpeed;
