@@ -647,14 +647,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4437219058467386813, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
-      propertyPath: frontLeftCannonShooting
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[0].color
+      value: blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[1].color
+      value: green
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[2].color
+      value: orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[3].color
+      value: purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[0].turretSprite
       value: 
-      objectReference: {fileID: 791803222}
-    - target: {fileID: 4437219058467386813, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
-      propertyPath: frontRightCannonShooting
+      objectReference: {fileID: 21300000, guid: 017d887956b4af54a8f6a5a1fc8cf99c, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[1].turretSprite
       value: 
-      objectReference: {fileID: 1859524617}
+      objectReference: {fileID: 21300000, guid: 8fb5540d41a51462abac297e7c6c33e3, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[2].turretSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 36812b465b60152489a444fd6c14905a, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[3].turretSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f32da85d44598594186cb0b3f24f0b17, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[1].tankSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[2].tankSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[3].tankSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[0].tankSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35ce8e6145d6799418592fa595cd58dd, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[0].tankSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: b1020e4046ad9bf4eb35639caaa5e087, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[1].tankSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: c6244efb91720431bab9fa4b76afac6d, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[1].tankSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 353449be9792a2b42af48db6dd0a7a65, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[2].tankSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: f67034f9d1c699944a42b4d676579129, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[2].tankSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: c91344faa0f82dd4bb85245d6d276555, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[3].tankSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f4d8a9c0121ee24597f0f31eacd431b, type: 3}
+    - target: {fileID: 2488969839454739063, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
+      propertyPath: animations.Array.data[3].tankSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7645c118fa826bd478bac16ce8bf851e, type: 3}
     - target: {fileID: 6863624737803188072, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
       propertyPath: m_Name
       value: Player
@@ -664,17 +736,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
---- !u!114 &791803222 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8662360395660096492, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
-  m_PrefabInstance: {fileID: 748187294}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05abdef49dd577b4da096550d73abceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &889676985
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e74f52f8ac7954c989b02a25ab1b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 6863624737803188072, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
 --- !u!4 &889676987
 Transform:
   m_ObjectHideFlags: 0
@@ -1322,19 +1382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 6047416069599303609, guid: 9654de3aa1c6b4b6b926da25b302ba95, type: 3}
+  spawnPoints: []
   spawnRate: 1
   maxEnemies: 5
---- !u!114 &1859524617 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2463237813701042773, guid: 3fb4b68271ee2405ab8eafa2d8891651, type: 3}
-  m_PrefabInstance: {fileID: 748187294}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05abdef49dd577b4da096550d73abceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1891272897
 GameObject:
   m_ObjectHideFlags: 0

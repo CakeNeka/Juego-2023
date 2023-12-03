@@ -10,9 +10,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour { 
     public static GameManager Instance {  get; private set; } // The only instance of GameManager.
 
-    [SerializeField] GameObject playerPrefab;
     private Transform playerTransform;
     private UIManager uiManager;
+    private EnemySpawner spawner;
 
     public Transform PlayerTransform => playerTransform;
 

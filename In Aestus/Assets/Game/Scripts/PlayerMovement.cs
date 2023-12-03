@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 movementDir;
     public float MovementSpeed { get; set; }
     public float RotationSpeed { get; set; }
+    public bool IsMoving { get; private set; }
     Transform spriteTransform;      
 
     void Start() {
@@ -25,7 +26,8 @@ public class PlayerMovement : MonoBehaviour {
 
         movementDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
-        if (movementDir.magnitude != 0) {
+        IsMoving = movementDir.magnitude != 0;
+        if (IsMoving) {
             RotatePlayerSprite();
         }
     }

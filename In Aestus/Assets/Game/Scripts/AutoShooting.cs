@@ -15,7 +15,6 @@ public class AutoShooting : MonoBehaviour
     private Coroutine shootingCoroutine;
 
     private void Start() {
-        Debug.Log(pooler);
         shootingCoroutine = StartCoroutine(ShootRepeating());
     }
 

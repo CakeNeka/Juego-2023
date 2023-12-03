@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 3469707320281006426}
   - component: {fileID: 1310755522050245054}
   - component: {fileID: 4437219058467386813}
+  - component: {fileID: 2488969839454739063}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -297,9 +298,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackingCannonShooting: {fileID: 8995811280949200344}
-  frontLeftCannonShooting: {fileID: 0}
-  frontRightCannonShooting: {fileID: 0}
+  frontLeftCannonShooting: {fileID: 8662360395660096492}
+  frontRightCannonShooting: {fileID: 2463237813701042773}
   playerStats: {fileID: 11400000, guid: 0a1c5bb20829a9547ba25e1ca2dfdbfe, type: 2}
+--- !u!114 &2488969839454739063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863624737803188072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0865a293a8ea0084e8ed5d5062f9e4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations:
+  - color: green
+    tankSprites:
+    - {fileID: 21300000, guid: c6244efb91720431bab9fa4b76afac6d, type: 3}
+    - {fileID: 21300000, guid: 353449be9792a2b42af48db6dd0a7a65, type: 3}
+    turretSprite: {fileID: 21300000, guid: 8fb5540d41a51462abac297e7c6c33e3, type: 3}
+  tankRenderer: {fileID: 2320031048308965913}
+  turretRenderer: {fileID: 7186279735814739405}
+  frameInterval: 0.1
 --- !u!1 &7721940518389284750
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +552,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c6244efb91720431bab9fa4b76afac6d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 35ce8e6145d6799418592fa595cd58dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -679,7 +701,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 8fb5540d41a51462abac297e7c6c33e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 017d887956b4af54a8f6a5a1fc8cf99c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

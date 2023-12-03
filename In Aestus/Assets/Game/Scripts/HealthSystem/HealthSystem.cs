@@ -75,7 +75,6 @@ public abstract class HealthSystem : MonoBehaviour {
     }
 
     public void StartIframes() {
-        Debug.Log($"Starting {name} iframes");
         StartCoroutine(StartInvulnerability(invulnerabilityDuration));
     }
 

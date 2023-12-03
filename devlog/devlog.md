@@ -100,6 +100,8 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
 > *Tanque disparando a enemigos*
 
 - [ ] **SPRITES** o gráficos, adiós triángulos
+    - [x] Jugador
+    - [ ] Enemigos
 - [ ] **UI**
     - [x] Selección de tanque
     - [ ] Pausa
@@ -111,7 +113,7 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
 - [ ] Front cannon
     - [x] Cañón
     - [ ] Balas diferentes
-- [ ] Spawn enemies out of bounds
+- [x] Spawn enemies out of bounds
 - [ ] Selección de tanque afecta a juego
 
 
