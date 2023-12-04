@@ -99,32 +99,24 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
 > 
 > *Tanque disparando a enemigos*
 
-- [ ] **SPRITES** o gráficos, adiós triángulos
-    - [x] Jugador
-    - [ ] Enemigos
-- [ ] **UI**
+- [x] **SPRITES** de jugador, adiós triángulos
+- [x] **UI**
     - [x] Selección de tanque
-    - [ ] Pausa
     - [x] Ganar/Perder 
-    - [ ] Temporizador
-
-
-- [ ] **MAPA** Generado aleatoriamente si es posible
-- [ ] Front cannon
-    - [x] Cañón
-    - [ ] Balas diferentes
+- [x] Cañón frontal
 - [x] Spawn enemies out of bounds
-- [ ] Selección de tanque afecta a juego
 
 
 ### Semana 4 de diciembre - 10 de diciembre
 
 #### Gameplay
 
+- [ ] **MAPA** Generado aleatoriamente si es posible
 - [ ] Progreso
-- [ ] boss
+    - [ ] Niveles
+    - [ ] Tiempo
+- [ ] Boss
 - [ ] Drops
-- [ ] Niveles
 
 #### Sonidos y efectos
 
@@ -135,6 +127,12 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
         - [ ] Enemigo
         - [ ] Jugador
 - [ ] Música
+
+### Sprites
+
+- [ ] Selección de tanque
+- [ ] Mapa
+- [ ] Enemigos
 
 Para los sonidos podemos utilizar [Esta página](https://sfxr.me/)
 
