@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
     public Transform PlayerTransform => playerTransform;
 
     private void Awake() {
+        Application.targetFrameRate = 144;
         if (Instance != null) {
             Destroy(gameObject);
             Debug.LogError("2 or more GameManagers found in scene");
