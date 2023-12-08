@@ -14,6 +14,18 @@ public class GameManager : MonoBehaviour {
     private UIManager uiManager;
     private EnemySpawner spawner;
 
+    [Header("Sound assets")]
+
+    [SerializeField]
+    private SoundAudioClip[] soundAudioClipArray;
+    public Dictionary<SoundManager.Sound, AudioClip> soundAudioClipMap;
+
+    [Serializable]
+    public class SoundAudioClip {
+        public SoundManager.Sound sound;
+        public AudioClip audioClip;
+    }
+
     public Transform PlayerTransform => playerTransform;
 
     private void Awake() {
@@ -26,7 +38,7 @@ public class GameManager : MonoBehaviour {
 
         Time.timeScale = 1.0f;
         Instance = this;
-
+        InitializeSoundAudioCipMap();
     }
 
     private void Start() {
@@ -34,6 +46,13 @@ public class GameManager : MonoBehaviour {
         playerTransform.gameObject.name = "Player";
 
         uiManager = FindObjectOfType<UIManager>();
+    }
+
+    private void InitializeSoundAudioCipMap() {
+        soundAudioClipMap = new Dictionary<SoundManager.Sound, AudioClip>();
+        foreach (var sound in soundAudioClipArray) {
+            soundAudioClipMap.Add(sound.sound, sound.audioClip);
+        }
     }
 
     public void GameOver() {

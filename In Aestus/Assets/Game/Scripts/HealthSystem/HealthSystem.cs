@@ -52,6 +52,7 @@ public abstract class HealthSystem : MonoBehaviour {
 
         ChangeHp(-damage);
         UpdateHealthBar();
+        OnDamageReceived();
         if (invulnerabilityDuration > 0 && enablesInvulnerability) {
             StartIframes();
         }
@@ -79,6 +80,10 @@ public abstract class HealthSystem : MonoBehaviour {
     }
 
     protected abstract void Die();
+
+    protected virtual void OnDamageReceived() {
+
+    }
 
     private void UpdateHealthBar() {
         if (healthBar) {

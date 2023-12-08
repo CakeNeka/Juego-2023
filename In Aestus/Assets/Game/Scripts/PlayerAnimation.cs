@@ -66,10 +66,9 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Start() {
         // Debugging:
-        SetAnimationColor("green");
+        SetAnimationColor("blue");
         StartAnimation();
-
-        StartCoroutine(ChangeColorRepeating());
+        // StartCoroutine(ChangeColorRepeating());
     }
 
     IEnumerator ChangeColorRepeating() {

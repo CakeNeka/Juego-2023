@@ -25,7 +25,8 @@ public class AutoShooting : MonoBehaviour
             bullet.SetActive(false);
             bullet.transform.position = firepoint.transform.position;
             bullet.transform.rotation = firepoint.transform.rotation;
-            bullet.SetActive(true);  
+            bullet.SetActive(true);
+            SoundManager.PlaySound(SoundManager.Sound.PlayerAttack);
             yield return new WaitForSeconds(ShootDelay);
         }
     }

@@ -9,8 +9,13 @@ public class BaseEnemyHealthSystem : HealthSystem {
 
     protected override void Die() {
         Debug.Assert(Spawner != null);
-        if (Spawner)
-            Spawner.ActiveEnemies--;
+        Spawner.ActiveEnemies--;
+
+        SoundManager.PlaySound(SoundManager.Sound.EnemyDie);
         Destroy(gameObject);
+    }
+
+    protected override void OnDamageReceived() {
+        SoundManager.PlaySound(SoundManager.Sound.EnemyHit);
     }
 }
