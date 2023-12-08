@@ -1,19 +1,19 @@
-# TONK
+<h1 align="center">TONK</h1>
 
-> ### **T**urbo **O**mega **N**itro **K**night
+<h3 align="center"><i>Turbo Omega Nitro Knight</i></h3>
+<br>
+<pre align="center">
+ _________  ________  ________   ___  __                             
+|\___   ___\\   __  \|\   ___  \|\  \|\  \                           
+\|___ \  \_\ \  \|\  \ \  \\ \  \ \  \/  /|_            __(   )====::
+     \ \  \ \ \  \\\  \ \  \\ \  \ \   ___  \          /~~~~~~~~~\   
+      \ \  \ \ \  \\\  \ \  \\ \  \ \  \\ \  \         \O.O.O.O.O/   
+       \ \__\ \ \_______\ \__\\ \__\ \__\\ \__\                      
+        \|__|  \|_______|\|__| \|__|\|__| \|__|                      
 
-```
- _________  ________  ________   ___  __            
-|\___   ___\\   __  \|\   ___  \|\  \|\  \          
-\|___ \  \_\ \  \|\  \ \  \\ \  \ \  \/  /|_         __(   )====::
-     \ \  \ \ \  \\\  \ \  \\ \  \ \   ___  \       /~~~~~~~~~\
-      \ \  \ \ \  \\\  \ \  \\ \  \ \  \\ \  \      \O.O.O.O.O/
-       \ \__\ \ \_______\ \__\\ \__\ \__\\ \__\     
-        \|__|  \|_______|\|__| \|__|\|__| \|__|     
+</pre>
 
-```
-
-### Diseño
+## Diseño
 
 - Top down survivor de Tanques.
 
@@ -21,14 +21,14 @@
 - Vampire Survivors 
 - Brotato
 
-#### Objetivo
+### Objetivo
 
 - El jugador tiene que sobrevivir un tiempo determinado  
 - Conforme avanza el tiempo el juego se vuelve difícil:    
     - Aparecen nuevos enemigos
     - El jugador desbloquea armas
 
-#### Mecánicas
+### Mecánicas
 
 - **Movimiento**
     - El jugador (un tanque) se maneja con las flechas ✔
@@ -56,7 +56,7 @@
 - Cada nivel, subir **velocidad**, **vida** o **daño**
 - Cuando se acabe el tiempo --> BOSS
 
-### Aspectos técnicos
+## Aspectos técnicos
 
 Diseño modular, es decir, 1 componente para cada función por ejemplo el **Objeto Jugador** tiene los componentes
 - `Movement`
@@ -68,15 +68,15 @@ Diseño modular, es decir, 1 componente para cada función por ejemplo el **Obje
 
 (escenas, controles, componentes)
 
-### Desarrollo
+## Desarrollo
 
 - [Devlog](./devlog/devlog.md)
 
-### Capturas
+## Capturas
 
 
 
-### Recursos utilizados
+## Recursos utilizados
 
 - [Tutorial para desarrollar un clon de **Vampire Survivors**](https://www.youtube.com/playlist?list=PLgXA5L5ma2Bveih0btJV58REE2mzfQLOQ)
 - [Página para generar efectos de sonido](https://sfxr.me/)
