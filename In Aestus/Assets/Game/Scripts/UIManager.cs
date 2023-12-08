@@ -19,12 +19,10 @@ public class UIManager : MonoBehaviour
     }
 
     public void ExitToMenu() {
-        Debug.Log("Quitting game");
-        // TODO load scene 'menu' (1)
+        SceneManager.LoadScene(0);
     }
 
     public void Restart() {
-        Debug.Log("Restarting game...");
         gameManager.RestartGame();
     }
 }

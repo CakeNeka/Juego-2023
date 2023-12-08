@@ -120,17 +120,17 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
 
 #### Sonidos y efectos
 
-- [ ] Sonidos
-    - [ ] Disparo
-    - [ ] Impacto
-    - [ ] Muerte
-        - [ ] Enemigo
+- [x] Sonidos
+    - [x] Disparo
+    - [x] Impacto
+    - [x] Muerte
+        - [x] Enemigo
         - [ ] Jugador
 - [ ] Música
 
 ### Sprites
 
-- [ ] Selección de tanque
+- [x] Selección de tanque (Persistencia de datos entre escenas mediante una clase estática)
 - [ ] Mapa
 - [ ] Enemigos
 

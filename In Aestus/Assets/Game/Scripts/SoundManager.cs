@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,11 +13,28 @@ public static class SoundManager
 
     private static Dictionary<Sound, float> soundTimerDictionary = new Dictionary<Sound, float>();
 
+    public static void PlaySound(Sound sound, Vector3 position) {
+        if (CanPlaySound(sound)) {
+            GameObject soundGo = new GameObject("Sound");
+            soundGo.transform.position = position;
+            AudioSource audioSource = soundGo.AddComponent<AudioSource>();
+            audioSource.clip = GameManager.Instance.soundAudioClipMap[sound];
+            audioSource.maxDistance = 100f;
+            audioSource.spatialBlend = 1f;
+            audioSource.rolloffMode = AudioRolloffMode.Linear;
+            audioSource.Play();
+            soundTimerDictionary[sound] = Time.time;
+
+            Object.Destroy(soundGo, audioSource.clip.length);
+        }
+    }
+
     public static void PlaySound(Sound sound) {
         if (CanPlaySound(sound)) {
             GameObject soundGo = new GameObject("Sound");
             AudioSource audioSource = soundGo.AddComponent<AudioSource>();
-            audioSource.PlayOneShot(GameManager.Instance.soundAudioClipMap[sound]);
+            audioSource.clip = GameManager.Instance.soundAudioClipMap[sound];
+            audioSource.Play();
             soundTimerDictionary[sound] = Time.time;
         }
     }

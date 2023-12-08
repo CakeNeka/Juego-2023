@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    public static string selectedTankColor = "green"; // Atributo estático para persistencia entre escenas
+
     [System.Serializable]
     class SpriteAnimation {
         [SerializeField]
@@ -35,11 +37,19 @@ public class PlayerAnimation : MonoBehaviour
     private void Awake() {
         playerMovement = GetComponent<PlayerMovement>();
     }
+    private void Start() {
+        // Debugging:
+        SetAnimationColor(selectedTankColor);
+        StartAnimation();
+        // StartCoroutine(ChangeColorRepeating());
+    }
 
     public void SetAnimationColor(string color) {
         SpriteAnimation s = animations.Where(s => s.Color.Equals(color)).FirstOrDefault();
         if (s == null) {
-            Debug.LogError("Color " + color + " is not defined");
+            Debug.LogError("Color " + color + " is not defined, using default color");
+            color = "green";
+            s = animations.Where(s => s.Color.Equals(color)).FirstOrDefault();
         }
 
         selectedSprites = s.TankSprites;
@@ -64,12 +74,6 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    private void Start() {
-        // Debugging:
-        SetAnimationColor("blue");
-        StartAnimation();
-        // StartCoroutine(ChangeColorRepeating());
-    }
 
     IEnumerator ChangeColorRepeating() {
         while (true) {

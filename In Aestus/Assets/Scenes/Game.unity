@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 320247046}
   - component: {fileID: 320247045}
   - component: {fileID: 320247044}
-  - component: {fileID: 320247047}
   - component: {fileID: 320247048}
   m_Layer: 0
   m_Name: Main Camera
@@ -350,19 +349,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &320247047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320247043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e537bf597474c401fb751841ddc0d60b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &320247048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,6 +751,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e74f52f8ac7954c989b02a25ab1b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundAudioClipArray:
+  - sound: 2
+    audioClip: {fileID: 8300000, guid: 5f1d7ac50f2b47d42a7ee18b2ae2d7ab, type: 3}
+  - sound: 4
+    audioClip: {fileID: 8300000, guid: 1fa5dca1188b2f1469b96da575068f11, type: 3}
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: 31374474b19a54745bb02c5565a0abd1, type: 3}
 --- !u!4 &889676987
 Transform:
   m_ObjectHideFlags: 0
