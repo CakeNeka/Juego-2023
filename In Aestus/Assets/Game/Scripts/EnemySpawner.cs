@@ -32,7 +32,6 @@ public class EnemySpawner : MonoBehaviour
                 if (y == .5f && x == .5f) // avoids creating spawnpoint in center
                     continue;
 
-                Assert.IsTrue(i < spawnPoints.Length);
                 Vector3 viewportPosition = new Vector3(x, y, 0);
                 Vector3 worldPosition = Camera.main.ViewportToWorldPoint(viewportPosition) + offset;
                 worldPosition.z = 0; // Working on 2D, ignore Z component

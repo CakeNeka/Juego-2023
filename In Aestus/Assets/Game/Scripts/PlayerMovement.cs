@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void Update() {
-
         movementDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
         IsMoving = movementDir.magnitude != 0;

@@ -32,13 +32,22 @@ public class TonkSkinSelect : MonoBehaviour
 
     public void NextSprite()
     {
-        index = ++index >= tonkSkins.Count ? 0 : index;
+        index++;
+        if (index >= tonkSkins.Count) {
+            index = 0;
+        }
+
+     // index = ++index >= tonkSkins.Count ? 0 : index;
         UpdateSprites();
     }
 
     public void PrevSprite()
     {
-        index = --index < 0 ? tonkSkins.Count - 1 : index;
+        index--;
+        if (index < 0) {
+            index = tonkSkins.Count - 1;
+        }
+        // index = --index < 0 ? tonkSkins.Count - 1 : index;
         UpdateSprites();
     }
 

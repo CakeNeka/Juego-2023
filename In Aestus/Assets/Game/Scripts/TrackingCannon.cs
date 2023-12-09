@@ -12,15 +12,15 @@ public class TrackingCannon : MonoBehaviour
     private void Update() {
         Transform target = FindNearestEnemy();
 
-        if (target != null) {
-            SmoothRotation(transform, target.position - transform.position, 10f);
+        if (target) {
+            LookAtEnemy(target, 10f);
         }
     }
 
     private Transform FindNearestEnemy() {
-        Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0));
-        Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1));
-        Collider2D[] colliders = Physics2D.OverlapAreaAll(bottomLeft, topRight);
+        Vector2 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0)); // esquina inferior izquierda
+        Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1));   // esquina superior derecha
+        Collider2D[] colliders = Physics2D.OverlapAreaAll(bottomLeft, topRight);  // Colliders en el área que forman
 
         Transform nearestEnemy = null;
         float bestDistance = Mathf.Infinity;
@@ -38,9 +38,11 @@ public class TrackingCannon : MonoBehaviour
         return nearestEnemy;
     }
 
-    private void SmoothRotation(Transform t, Vector2 lookDirection, float rotationSpeed) {
+    private void LookAtEnemy(Transform enemyTransform, float rotationSpeed) {
+        Vector2 lookDirection = enemyTransform.position - transform.position;
+
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90; // -90 usando primitives, eliminar con sprites mirando a la derecha
         Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        t.rotation = Quaternion.Slerp(t.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 }

@@ -16,7 +16,6 @@ public class EnemyController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        
         Transform playerTransform = GameManager.Instance.PlayerTransform; // transform del jugador
         Vector2 dir = (playerTransform.position - transform.position).normalized;
         Vector2 movement = dir * movementSpeed;
