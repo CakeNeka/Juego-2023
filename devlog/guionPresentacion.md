@@ -16,14 +16,19 @@ class:
 
 ### Índice
  
-1. Descripción del juego
+1. Introducción
+2. Descripción del juego
     - Objetivo (sobrevivir)
     - Mecánicas
-2. Desarrollo
+3. Desarrollo
+    - Movimiento de jugador y autoapuntado
+    - Movimiento de enemigos
+    - Aparición de enemigos
+    - Selección de tanque
 
 ---
 
-### 0. Introducción
+### 1. Introducción
 
 - Experiencia previa con las herramientas (c#, git y unity)
 - Elección del tipo de juego
@@ -33,7 +38,7 @@ class:
 
 ---
 
-### 0. Introducción
+### 1. Introducción
 
 - Recursos utilizados
     - Proyectos previos
@@ -45,7 +50,7 @@ class:
 
 ---
 
-### 1. Descripción del juego
+### 2. Descripción del juego
 
 #### Objetivo
 
@@ -92,7 +97,7 @@ Es un juego tipo **survivor**.
 
 ---
 
-### 2. Desarrollo
+### 3. Desarrollo
 
 Aspectos técnicos del juego (fragmentos de código, explicacion de algunos elementos)
 
@@ -105,7 +110,7 @@ Aspectos técnicos del juego (fragmentos de código, explicacion de algunos elem
 
 #### Movimiento
 
-**normalizar**
+**Normalización del vector**
 - Problema de velocidad diagonal, solución al normalizar el vector
 - ¿Qué es normalizar un vector? (misma dirección y sentido pero **módulo = 1**)
 
@@ -144,7 +149,7 @@ private void Update() {
     Transform target = FindNearestEnemy();
 
     if (target != null) {
-        LookAtEnemy(transform, target.position - transform.position, 10f);
+        LookAtEnemy(transform, target.position, 10f);
     }
 }
 ```
@@ -194,11 +199,15 @@ hace falta profundizar desarrollando en 2D
 
 ```cs
 private void LookAtEnemy(Transform enemyTransform, float rotationSpeed) {
-    Vector2 lookDirection = enemyTransform.position - transform.position; // Dirección a la que tiene que mirar el cañón
+    // Dirección a la que tiene que mirar el cañón
+    Vector2 lookDirection = enemyTransform.position - transform.position;
 
-    float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90; // -90 usando primitives, eliminar con sprites mirando a la derecha
-    Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward); // Rotación que debe tener el cañón para estar mirando al enemigo
-    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); // Girar suavemente
+    // Ángulo que debe girar el cañón
+    float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90; 
+    // Rotación que debe tener el cañón
+    Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward); 
+    // Girar suavementeón para estar mirando al enemigo
+    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 }
 ```
 ---
@@ -217,9 +226,12 @@ Los enemigos se mueven hacia el jugador.
 
 ```cs
 private void FixedUpdate() {
-    Transform playerTransform = GameManager.Instance.PlayerTransform; // transform del jugador (Gamemanager tiene una referencia al jugador)
-    Vector2 dir = (playerTransform.position - transform.position).normalized; // Vector normalizado que apunta al jugador
-    Vector2 movement = dir * movementSpeed; // ()
+    // transform del jugador (Gamemanager tiene una referencia al jugador)
+    Transform playerTransform = GameManager.Instance.PlayerTransform; 
+
+    // Vector normalizado que apunta al jugador
+    Vector2 dir = (playerTransform.position - transform.position).normalized; 
+    Vector2 movement = dir * movementSpeed; 
 
 
     // Si el enemigo está en contacto con el jugador, el enemigo no se mueve.
@@ -271,7 +283,7 @@ private void generateSpawnPoints() {
 
     for (float x = 0; x <= 1; x += .5f) {
         for (float y = 0; y <= 1; y += .5f) {
-            if (y == .5f && x == .5f)       // Evita crear un punto de aparición en el centro de la pantalla 
+            if (y == .5f && x == .5f)       // Evita crear un punto de aparición en el centro 
                 continue;
 
             Vector3 viewportPosition = new Vector3(x, y, 0);
@@ -334,3 +346,15 @@ private void UpdateSprites() {
     PlayerAnimation.selectedTankColor = tonkSkins[index].color;
 }
 ```
+
+---
+
+### Preguntas y sugerencias
+
+![w:300  h:300](./media/emoji.png)
+
+---
+
+### ¡Gracias por vuestra atención!
+
+![](./media/thx.gif)
