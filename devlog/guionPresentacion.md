@@ -54,13 +54,12 @@ class:
 
 #### Objetivo
 
-El objetivo del juego es **sobrevivir** un tiempo determinado (5 minutos)
-a oleadas de enemigos. 
-Conforme el juego avanza, aparecen más enemigos.
-Es un juego tipo **survivor**. 
+- El objetivo del juego es **sobrevivir** un tiempo determinado 
+    (5 minutos) a oleadas de enemigos 
+- Conforme el juego avanza, aparecen más enemigos
+- Es un juego tipo **survivor**
 
 ---
-
 **Juegos del género survivors**
 
 - Vampire Survivors
@@ -74,7 +73,7 @@ Es un juego tipo **survivor**.
 
 #### Mecánicas
 
-1. El **movimiento**. 
+1. **Movimiento** del jugador. 
     - 8 direcciones
     - Velocidad estable
 2. **Combate**
@@ -99,7 +98,8 @@ Es un juego tipo **survivor**.
 
 ### 3. Desarrollo
 
-Aspectos técnicos del juego (fragmentos de código, explicacion de algunos elementos)
+Aspectos técnicos del juego (fragmentos de código y explicacion de algunos elementos)
+
 
 - **Movimiento de jugador**
 - **Autoapuntado**
@@ -117,8 +117,7 @@ Aspectos técnicos del juego (fragmentos de código, explicacion de algunos elem
 ---
 
 **Update y FixedUpdate**
-- `FixedUpdate()` es llamado en un **intervalo fijo**, `Update()` se 
-llama **cada frame**.
+- `FixedUpdate()` es llamado en un **intervalo fijo**, `Update()` se llama **cada frame**.
 - `FixedUpdate()` **físicas**
 - `Update()` **controles**
 
@@ -174,7 +173,8 @@ private Transform FindNearestEnemy() {
     Transform nearestEnemy = null;
     float bestDistance = Mathf.Infinity;
 
-    foreach (Collider2D collider in colliders) {    // En este bucle encontramos el enemigo más cercano al jugador
+    // En este bucle encontramos el enemigo más cercano al jugador
+    foreach (Collider2D collider in colliders) {  
         if (collider.CompareTag("Enemy")) {
             float distance = Vector3.Distance(transform.parent.position, collider.transform.position);
             if (distance < bestDistance) {
@@ -194,8 +194,7 @@ private Transform FindNearestEnemy() {
 
 **2. Mirar hacia el enemigo más cercano**
 
-`Quaternion` representa rotación, son un concepto complicado y no 
-hace falta profundizar desarrollando en 2D
+Un `Quaternion` representa la rotación de un objeto, es un concepto complicado y no es necesario profundizar desarrollando en 2D
 
 ```cs
 private void LookAtEnemy(Transform enemyTransform, float rotationSpeed) {
@@ -206,7 +205,7 @@ private void LookAtEnemy(Transform enemyTransform, float rotationSpeed) {
     float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90; 
     // Rotación que debe tener el cañón
     Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward); 
-    // Girar suavementeón para estar mirando al enemigo
+    // Girar suavemente para estar mirando al enemigo
     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 }
 ```
@@ -223,7 +222,6 @@ private void LookAtEnemy(Transform enemyTransform, float rotationSpeed) {
 
 Los enemigos se mueven hacia el jugador.
 
-
 ```cs
 private void FixedUpdate() {
     // transform del jugador (Gamemanager tiene una referencia al jugador)
@@ -232,7 +230,6 @@ private void FixedUpdate() {
     // Vector normalizado que apunta al jugador
     Vector2 dir = (playerTransform.position - transform.position).normalized; 
     Vector2 movement = dir * movementSpeed; 
-
 
     // Si el enemigo está en contacto con el jugador, el enemigo no se mueve.
     if (touchingPlayer) {
@@ -251,8 +248,7 @@ private void FixedUpdate() {
 
 #### Spawn de enemigos
 
-Genera un enemigo cada `spawnRate` segundos en una de las posiciones
-de aparición alrededor del jugador
+Genera un enemigo cada `spawnRate` segundos en una de las posiciones de aparición alrededor del jugador
 
 ```cs
 IEnumerator SpawnRepeating() {
@@ -272,6 +268,7 @@ IEnumerator SpawnRepeating() {
 ```
 
 ---
+
 #### Spawn de enemigos
 
 **Generación de puntos de aparición de enemigos**
@@ -283,7 +280,7 @@ private void generateSpawnPoints() {
 
     for (float x = 0; x <= 1; x += .5f) {
         for (float y = 0; y <= 1; y += .5f) {
-            if (y == .5f && x == .5f)       // Evita crear un punto de aparición en el centro 
+            if (y == .5f && x == .5f) // Evita crear un punto de aparición en el centro 
                 continue;
 
             Vector3 viewportPosition = new Vector3(x, y, 0);
@@ -315,7 +312,7 @@ private void generateSpawnPoints() {
 
 ```cs
 public void NextSprite() {
-    // index = --index < 0 ? tonkSkins.Count - 1 : index;
+    // index = ++index == tonkSkins.Count ? 0 : index;
     index++;
     if (index >= tonkSkins.Count) {
         index = 0;
@@ -357,4 +354,4 @@ private void UpdateSprites() {
 
 ### ¡Gracias por vuestra atención!
 
-![](./media/thx.gif)
+![width:300](./media/pinkie.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![width:300](./media/thx.gif)
