@@ -266,7 +266,7 @@ private void generateSpawnPoints() {
 - Modificar imagen (UI)
 - Persistencia de datos entre escenas
 
-![tonk_selection.gif]
+![](../In%20Aestus/Assets/Game/Sprites/Tank/tank_blue_body_1.png)
 
 ```cs
 public void NextSprite() {
