@@ -10,6 +10,8 @@ class:
 
 ## Turbo Omega Nitro Knight
 
+![w:200](./media/1702139325837.gif)
+
 ---
 
 ### Índice
@@ -49,25 +51,23 @@ class:
 
 El objetivo del juego es **sobrevivir** un tiempo determinado (5 minutos)
 a oleadas de enemigos. 
-
 Conforme el juego avanza, aparecen más enemigos.
-
 Es un juego tipo **survivor**. 
+
+---
 
 **Juegos del género survivors**
 
 - Vampire Survivors
 - 20 Minutes Till Dawn
 - Brotato
-- Yet Another Zombie Survivor
+- Yet Another Zombie Survivor   
 
-![vampiresurvivors.png]
+![w:500  h:250](./media/vampiroS.avif) ![w:500  h:250](./media/brotato.jpg)
 
 ---
 
 #### Mecánicas
-
-Descripción de los elementos del videojuego
 
 1. El **movimiento**. 
     - 8 direcciones
@@ -77,6 +77,10 @@ Descripción de los elementos del videojuego
     - Enemigos infligen **daño de contacto**
     - Torreta principal con **autoapuntado** (dispara al enemigo más cercano)
     - Torreta secundaria dispara en la **dirección del movimiento**
+
+---
+#### Mecánicas
+
 3. **Enemigos**
     - Aparecen alrededor del jugador
     - Reaparecen cada dos segundos hasta alcanzar el número máximo
@@ -85,8 +89,6 @@ Descripción de los elementos del videojuego
     - El juego finaliza cuando el temporizador llega a 0
 5. **Customización**
     - Selección del color del tanque
-
-[tonkGame.gif]
 
 ---
 
@@ -107,6 +109,8 @@ Aspectos técnicos del juego (fragmentos de código, explicacion de algunos elem
 - Problema de velocidad diagonal, solución al normalizar el vector
 - ¿Qué es normalizar un vector? (misma dirección y sentido pero **módulo = 1**)
 
+---
+
 **Update y FixedUpdate**
 - `FixedUpdate()` es llamado en un **intervalo fijo**, `Update()` se 
 llama **cada frame**.
@@ -122,13 +126,13 @@ private void Update() {
         RotatePlayerSprite(); // Rotación del sprite del jugador en la dirección del movimiento
     }
 }
-
 private void FixedUpdate() {
 
     Vector2 movement = movementDir * MovementSpeed;
     rb2d.velocity = movement;
 }
 ```
+
 
 ---
 
@@ -144,6 +148,16 @@ private void Update() {
     }
 }
 ```
+---
+
+#### Autoapuntado (`TrackingCannon.cs`)
+
+![w:1080](./media/tranking.gif)
+
+
+---
+
+#### Autoapuntado (`TrackingCannon.cs`)
 
 **1. Encontrar al enemigo más cercano**
 ```cs
@@ -171,6 +185,8 @@ private Transform FindNearestEnemy() {
 
 ---
 
+#### Autoapuntado (`TrackingCannon.cs`)
+
 **2. Mirar hacia el enemigo más cercano**
 
 `Quaternion` representa rotación, son un concepto complicado y no 
@@ -185,6 +201,12 @@ private void LookAtEnemy(Transform enemyTransform, float rotationSpeed) {
     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); // Girar suavemente
 }
 ```
+---
+
+#### Movimiento del enemigo
+
+![w:1080](./media/Enemy_mov.gif)
+
 
 ---
 
@@ -208,6 +230,10 @@ private void FixedUpdate() {
     }
 }
 ```
+---
+#### Spawn de enemigos
+
+![w:1080](./media/Enemy_res.gif)
 
 ---
 
@@ -233,7 +259,10 @@ IEnumerator SpawnRepeating() {
 }
 ```
 
-Generación de puntos de aparición de enemigos
+---
+#### Spawn de enemigos
+
+**Generación de puntos de aparición de enemigos**
 
 ```cs
 private void generateSpawnPoints() {
@@ -266,29 +295,36 @@ private void generateSpawnPoints() {
 - Modificar imagen (UI)
 - Persistencia de datos entre escenas
 
-![](../In%20Aestus/Assets/Game/Sprites/Tank/tank_blue_body_1.png)
+![w:600  h:350](./media/tank_color_changer.gif)
+
+---
+
+#### Selección de tanque
 
 ```cs
 public void NextSprite() {
     // index = --index < 0 ? tonkSkins.Count - 1 : index;
-
     index++;
     if (index >= tonkSkins.Count) {
         index = 0;
     }
     UpdateSprites();
 }
-
 public void PrevSprite() {
     // index = --index < 0 ? tonkSkins.Count - 1 : index;
-
     index--;
     if (index < 0) {
         index = tonkSkins.Count - 1;
     }
     UpdateSprites();
 }
+``` 
 
+---
+
+#### Selección de tanque
+
+```cs
 private void UpdateSprites() {
     // Imagen en el menú
     tankImage.sprite = tonkSkins[index].tankSprite;
@@ -298,4 +334,3 @@ private void UpdateSprites() {
     PlayerAnimation.selectedTankColor = tonkSkins[index].color;
 }
 ```
-
