@@ -92,7 +92,7 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
     - \<- anterior
     - -\> Siguiente
 
-### Semana 27 de noviembre - 3 de noviembre
+### Semana 27 de noviembre - 3 de diciembre
 
 >
 > ![](./media/2023-12-01.png)
@@ -109,14 +109,15 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
 
 ### Semana 4 de diciembre - 10 de diciembre
 
-#### Gameplay
+Esta semana añadimos **efectos de sonido** y preparamos la presentación del  juego.
+También incluimos un sprite para el tanque e implementamos la posibilidad de elegir
+el color del tanque
 
-- [ ] **MAPA** Generado aleatoriamente si es posible
-- [ ] Progreso
-    - [ ] Niveles
-    - [ ] Tiempo
-- [ ] Boss
-- [ ] Drops
+#### Sprites
+
+- [x] Selección de tanque (Persistencia de datos entre escenas mediante una clase estática)
+- [ ] Mapa
+- [ ] Enemigos
 
 #### Sonidos y efectos
 
@@ -128,12 +129,19 @@ Esta semana podemos decirle adiós a los primitives y empezar a añadir **sprite
         - [ ] Jugador
 - [ ] Música
 
-### Sprites
-
-- [x] Selección de tanque (Persistencia de datos entre escenas mediante una clase estática)
-- [ ] Mapa
-- [ ] Enemigos
-
 Para los sonidos podemos utilizar [Esta página](https://sfxr.me/)
 
 Para la música alguna música de juego sin copyright
+
+### Semana del 11 al 17 de diciembre (Última semana)
+
+Esta semana completaremos el juego con algunos detalles.
+
+#### Gameplay
+
+- [ ] **MAPA** Generado aleatoriamente si es posible
+- [ ] Progreso
+    - [ ] Niveles
+    - [ ] Tiempo
+- [ ] Boss
+- [ ] Drops
