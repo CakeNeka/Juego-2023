@@ -67,7 +67,7 @@ class:
 - Brotato
 - Yet Another Zombie Survivor   
 
-![w:500  h:250](./media/vampiroS.avif) ![w:500  h:250](./media/brotato.jpg)
+![w:500  h:250](./media/vampiroS.jpg) ![w:500  h:250](./media/brotato.jpg)
 
 ---
 
