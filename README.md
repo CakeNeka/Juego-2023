@@ -1,17 +1,25 @@
 <h1 align="center">TONK</h1>
 
 <h3 align="center"><i>Turbo Omega Nitro Knight</i></h3>
+
+<div align="center">
+<img src="devlog/1702139325837.gif" alt="green tonk" align="center" width="100"/>
+</div>
+
 <br>
+
 <pre align="center">
- _________  ________  ________   ___  __                             
-|\___   ___\\   __  \|\   ___  \|\  \|\  \                           
-\|___ \  \_\ \  \|\  \ \  \\ \  \ \  \/  /|_            __(   )====::
-     \ \  \ \ \  \\\  \ \  \\ \  \ \   ___  \          /~~~~~~~~~\   
-      \ \  \ \ \  \\\  \ \  \\ \  \ \  \\ \  \         \O.O.O.O.O/   
-       \ \__\ \ \_______\ \__\\ \__\ \__\\ \__\                      
-        \|__|  \|_______|\|__| \|__|\|__| \|__|                      
+ _________  ________  ________   ___  __        
+|\___   ___\\   __  \|\   ___  \|\  \|\  \      
+\|___ \  \_\ \  \|\  \ \  \\ \  \ \  \/  /|_    
+     \ \  \ \ \  \\\  \ \  \\ \  \ \   ___  \   
+      \ \  \ \ \  \\\  \ \  \\ \  \ \  \\ \  \  
+       \ \__\ \ \_______\ \__\\ \__\ \__\\ \__\ 
+        \|__|  \|_______|\|__| \|__|\|__| \|__| 
 
 </pre>
+
+
 
 ## Diseño
 
@@ -71,8 +79,15 @@ Diseño modular, es decir, 1 componente para cada función por ejemplo el **Obje
 ## Desarrollo
 
 - [Devlog](./devlog/devlog.md)
+- [Presentación](https://cakeneka.github.io/Juego-2023/devlog)
 
 ## Capturas
+
+> ![](./devlog/media/Enemy_mov.gif)
+
+> ![](./devlog/media/Enemy_res.gif)
+
+> ![](./devlog/media/tank_color_changer.gif)
 
 
 
