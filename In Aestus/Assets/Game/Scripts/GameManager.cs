@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
 
         Time.timeScale = 1.0f;
         Instance = this;
-        InitializeSoundAudioCipMap();
+        InitializeSoundAudioClipMap();
     }
 
     private void Start() {
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour {
         uiManager = FindObjectOfType<UIManager>();
     }
 
-    private void InitializeSoundAudioCipMap() {
+    private void InitializeSoundAudioClipMap() {
         soundAudioClipMap = new Dictionary<SoundManager.Sound, AudioClip>();
         foreach (var sound in soundAudioClipArray) {
             soundAudioClipMap.Add(sound.sound, sound.audioClip);
